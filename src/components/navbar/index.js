@@ -8,21 +8,21 @@ function Navigate() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Dressed to Kill</Navbar.Brand>
+        <Navbar.Brand href="home">Dressed to Kill</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Schedule</Nav.Link>
+            <Nav.Link href="home">Home</Nav.Link>
+            <Nav.Link href="about">About</Nav.Link>
+            <Nav.Link href="schedule">Schedule</Nav.Link>
             <NavDropdown title="Hosts" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Connor Nutt</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="hosts">Connor Nutt</NavDropdown.Item>
+              <NavDropdown.Item href="hosts">
                 Scott Wharton
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Comedians</Nav.Link>
-            <Nav.Link href="#link">Contact Us</Nav.Link>
+            <Nav.Link href="comedians">Comedians</Nav.Link>
+            <Nav.Link href="contactus">Contact Us</Nav.Link>
             
           </Nav>
         </Navbar.Collapse>
