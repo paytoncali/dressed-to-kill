@@ -8,21 +8,23 @@ import ContactUsPage from "./pages/contactuspage";
 import HomePage from "./pages/homepage";
 import HostPage from "./pages/hostpage";
 import SchedulePage from "./pages/schedulepage";
-
+import Jumbo from "./components/jumbotron";
 
 function App() {
   return (
 
   <Router>
      <div>
+      <Jumbo />
      <Navigate />
       <Routes>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/schedule" component={SchedulePage} />
-        <Route exact path="/hosts" component={HostPage} />
-        <Route exact path="/comedians" component={ComedianPage} />
-        <Route exact path="/contactus" component={ContactUsPage} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/home" element={<HomePage />} />
+        <Route exact path="/about" element={<AboutPage />} />
+        <Route exact path="/schedule" element={<SchedulePage />} />
+        <Route exact path="/hosts" element={<HostPage />} />
+        <Route exact path="/comedians" element={<ComedianPage />} />
+        <Route exact path="/contactus" element={<ContactUsPage />} />
       </Routes>
     
      </div>

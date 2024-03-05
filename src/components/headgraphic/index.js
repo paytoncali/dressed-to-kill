@@ -13,7 +13,7 @@ function HeadGraphic() {
 
     return (
     <div style={styles.imageStyle}>
-        <img src='https://goldcoastgraphicdesigncompany.com.au/wp-content/uploads/2020/04/TheGraphicDesignCoLogo-1.png'></img>
+        <img src='https://goldcoastgraphicdesigncompany.com.au/wp-content/uploads/2020/04/TheGraphicDesignCoLogo-1.png' alt="headgraphic"> </img>
     </div>
 
     )
