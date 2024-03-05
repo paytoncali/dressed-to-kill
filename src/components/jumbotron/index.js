@@ -5,13 +5,9 @@ import Banner from "../../assets/banner-placeholder.jpeg"
 
 function Jumbo() {
 return (
-    <div>
          <Card>
         <Card.Img variant="top" src={Banner} alt="banner" />
-        <Card.Body>
-        </Card.Body>
       </Card>
-</div>
 );
 }
 

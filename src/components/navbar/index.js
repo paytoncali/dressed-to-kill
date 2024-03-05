@@ -55,7 +55,7 @@ function Navigate() {
               <MDBNavbarLink href='comedians'>Comedians</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='contactus'>Contact US</MDBNavbarLink>
+              <MDBNavbarLink href='contactus'>Contact Us</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
           <span className='navbar-text'> Austin, TX's Classiest Comedy Show </span>

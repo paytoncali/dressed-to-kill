@@ -6,7 +6,7 @@ import Jumbo from "../components/jumbotron";
 const homePage = () => {
     return (
         <div>
-            payton
+               <Jumbo />
         </div>
     )
 }
