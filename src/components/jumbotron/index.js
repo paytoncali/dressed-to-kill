@@ -9,9 +9,6 @@ return (
          <Card>
         <Card.Img variant="top" src={Banner} alt="banner" />
         <Card.Body>
-          <Card.Text>
-            The Classiest Comedy Show in Austin, TX
-          </Card.Text>
         </Card.Body>
       </Card>
 </div>

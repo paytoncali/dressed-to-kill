@@ -1,33 +1,67 @@
-import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+
+import React, { useState } from 'react';
+import {
+  MDBNavbar,
+  MDBContainer,
+  MDBNavbarBrand,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBNavbarToggler,
+  MDBCollapse
+} from 'mdb-react-ui-kit';
+
+
 function Navigate() {
+    const [openNavText, setOpenNavText] = useState(false);
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="home">Dressed to Kill</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="about">About</Nav.Link>
-            <Nav.Link href="schedule">Schedule</Nav.Link>
-            <NavDropdown title="Hosts" id="basic-nav-dropdown">
-              <NavDropdown.Item href="hosts">Connor Nutt</NavDropdown.Item>
-              <NavDropdown.Item href="hosts">
-                Scott Wharton
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="comedians">Comedians</Nav.Link>
-            <Nav.Link href="contactus">Contact Us</Nav.Link>
-            
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <MDBNavbar expand='lg' light bgColor='light'>
+      <MDBContainer fluid>
+        <MDBNavbarBrand href='home'>Dressed To Kill</MDBNavbarBrand>
+        <MDBNavbarToggler
+          type='button'
+          data-target='#navbarText'
+          aria-controls='navbarText'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+          onClick={() => setOpenNavText(!openNavText)}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
+        <MDBCollapse navbar open={openNavText}>
+          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' href='home'>
+                Home
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='about'>About Us</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='schedule'>Schedule</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='hosts'>Hosts</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='comedians'>Comedians</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='contactus'>Contact US</MDBNavbarLink>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+          <span className='navbar-text'> Austin, TX's Classiest Comedy Show </span>
+        </MDBCollapse>
+      </MDBContainer>
+    </MDBNavbar>
   );
 }
 
