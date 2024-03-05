@@ -9,13 +9,13 @@ import HomePage from "./pages/homepage";
 import HostPage from "./pages/hostpage";
 import SchedulePage from "./pages/schedulepage";
 import Jumbo from "./components/jumbotron";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
-
+    <div>
+  <Jumbo />
   <Router>
-     <div>
-      <Jumbo />
      <Navigate />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
@@ -26,9 +26,9 @@ function App() {
         <Route exact path="/comedians" element={<ComedianPage />} />
         <Route exact path="/contactus" element={<ContactUsPage />} />
       </Routes>
-    
-     </div>
    </Router>
+   <Footer />
+    </div>
   );
 }
 
